@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAIShare</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Giriş Ekranı -->
+    <div id="loginSection" class="content">
+        <h2>Login</h2>
+        <input type="email" id="loginEmail" placeholder="Enter your email">
+        <input type="password" id="loginPassword" placeholder="Enter your password">
+        <button onclick="handleLogin()">Login</button>
+        <p id="loginError" style="color: red; display: none;">Invalid email or password</p>
+    </div>
+
+    <div id="appContent" style="display: none;">
+        <!-- Header -->
+        <header>
+            <h1>TAIShare</h1>
+            <button onclick="logout()" id="logoutBtn">Logout</button>
+        </header>
+
+        <!-- Active Users -->
+        <section id="activeUsers" class="content">
+            <h2>Active Users</h2>
+            <ul id="activeUserList"></ul>
+        </section>
+
+        <!-- Existing sections -->
+        <main>
+            <section id="users" class="content">
+                <h2>Users</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                </table>
+            </section>
+
+            <section id="todo" class="content">
+                <h2>To-Do List</h2>
+                <input type="text" id="taskInput" placeholder="Add a Task">
+                <button onclick="addTask()">Add</button>
+                <ul id="taskList"></ul>
+            </section>
+
+            <section id="files" class="content">
+                <h2>File Sharing</h2>
+                <input type="file" id="fileInput">
+                <p>Uploaded Files:</p>
+                <ul id="fileList"></ul>
+            </section>
+
+            <section id="chat" class="content">
+                <h2>Chat</h2>
+                <div id="chatBox"></div>
+                <input type="text" id="messageInput" placeholder="Type your message here">
+                <button onclick="sendMessage()">Send</button>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

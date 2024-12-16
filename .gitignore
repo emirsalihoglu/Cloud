@@ -1,0 +1,13 @@
+# Gereksiz klasörler
+node_modules/
+uploads/
+
+# Log dosyaları
+*.log
+
+# Sistem dosyaları
+.DS_Store
+Thumbs.db
+
+# Geçici dosyalar
+*.tmp
